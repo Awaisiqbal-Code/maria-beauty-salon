@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Maria Beauty Salon – Premium Beauty, Hair, Makeup & Skincare Services in Lahore. Professional bridal makeup, hair styling, facials & more. Book your appointment today." />
+  <meta name="keywords" content="beauty salon Lahore, bridal makeup Lahore, hair styling Lahore, Maria Beauty Salon, CMH Lahore salon, facials Lahore" />
+  <meta name="author" content="Maria Beauty Salon" />
+  <meta property="og:title" content="Maria Beauty Salon – Enhancing Your Natural Beauty" />
+  <meta property="og:description" content="Professional Beauty, Hair, Makeup & Skincare Services in Lahore. Book your luxury beauty experience today." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="salon_hero.png" />
+  <meta name="robots" content="index, follow" />
+  <title>Maria Beauty Salon | Luxury Beauty & Skincare in Lahore</title>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Maria Beauty Salon",
+    "description": "Premium beauty salon offering bridal makeup, hair styling, facials, skincare, and beauty services in Lahore.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Shop #10, Day Building, CMH Chowk, Opposite Cantonment Board, CMH Colony",
+      "addressLocality": "Lahore",
+      "postalCode": "54000",
+      "addressCountry": "PK"
+    },
+    "telephone": "+92-321-4129928",
+    "openingHours": "Mo-Su 10:00-21:00",
+    "priceRange": "$$",
+    "url": "https://mariabeautysalon.com",
+    "image": "salon_hero.png"
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="loader-logo">M</div>
+      <div class="loader-text">Maria Beauty Salon</div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scrollProgress" class="scroll-progress"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Maria Beauty Salon Home">
+        <span class="logo-m">M</span>
+        <div class="logo-text">
+          <span class="logo-name">Maria Beauty</span>
+          <span class="logo-sub">Salon</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="menubar">
+        <li role="none"><a href="#home" role="menuitem" class="nav-link active">Home</a></li>
+        <li role="none"><a href="#about" role="menuitem" class="nav-link">About</a></li>
+        <li role="none"><a href="#services" role="menuitem" class="nav-link">Services</a></li>
+        <li role="none"><a href="#gallery" role="menuitem" class="nav-link">Gallery</a></li>
+        <li role="none"><a href="#testimonials" role="menuitem" class="nav-link">Reviews</a></li>
+        <li role="none"><a href="#contact" role="menuitem" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="tel:+923214129928" class="nav-cta" aria-label="Call Maria Beauty Salon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 0117.15 2a2 2 0 012 1.73 12.13 12.13 0 01-.78 4.49 2 2 0 01-.45 2.11L16.91 11a16 16 0 006.01 6.01l1-.08a2 2 0 012.11-.45 12.13 12.13 0 014.49-.78z"></path></svg>
+        Book Now
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul>
+      <li><a href="#home" class="mobile-link" onclick="closeMobileMenu()">Home</a></li>
+      <li><a href="#about" class="mobile-link" onclick="closeMobileMenu()">About</a></li>
+      <li><a href="#services" class="mobile-link" onclick="closeMobileMenu()">Services</a></li>
+      <li><a href="#gallery" class="mobile-link" onclick="closeMobileMenu()">Gallery</a></li>
+      <li><a href="#testimonials" class="mobile-link" onclick="closeMobileMenu()">Reviews</a></li>
+      <li><a href="#contact" class="mobile-link" onclick="closeMobileMenu()">Contact</a></li>
+      <li><a href="#appointment" class="mobile-link mobile-cta" onclick="closeMobileMenu()">Book Appointment</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== SECTION 01: HERO ===== -->
+  <section id="home" class="hero" aria-label="Hero section">
+    <div class="hero-bg">
+      <img src="salon_hero.png" alt="Maria Beauty Salon luxury interior" class="hero-img" loading="eager" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="particles" aria-hidden="true" id="particles"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        Premium Beauty Experience in Lahore
+      </div>
+      <h1 class="hero-title reveal-up">
+        Enhancing Your<br />
+        <em>Natural Beauty</em>
+      </h1>
+      <p class="hero-subtitle reveal-up">
+        Professional Beauty, Hair, Makeup &amp; Skincare Services in Lahore
+      </p>
+      <div class="hero-phone reveal-up">
+        <a href="tel:+923214129928" class="phone-display" aria-label="Call us at +92 321 4129928">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 017.12 2a2 2 0 012 1.73 12.13 12.13 0 00.78 4.49 2 2 0 01-.45 2.11L8.09 11a16 16 0 006.01 6.01l1-.08a2 2 0 012.11-.45 12.13 12.13 0 014.49-.78z"></path></svg>
+          +92 321 4129928
+        </a>
+      </div>
+      <div class="hero-buttons reveal-up">
+        <a href="#appointment" class="btn btn-primary" id="heroBookBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Book Appointment
+        </a>
+        <a href="tel:+923214129928" class="btn btn-glass" id="heroCallBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 017.12 2a2 2 0 012 1.73 12.13 12.13 0 00.78 4.49 2 2 0 01-.45 2.11L8.09 11a16 16 0 006.01 6.01l1-.08a2 2 0 012.11-.45 12.13 12.13 0 014.49-.78z"></path></svg>
+          Call Now
+        </a>
+      </div>
+      <div class="hero-stats reveal-up" aria-label="Salon statistics">
+        <div class="stat-item">
+          <span class="stat-number" data-target="500">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="12">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Services</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="5">0</span><span class="stat-plus">★</span>
+          <span class="stat-label">Rating</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator" aria-label="Scroll down">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 02: ABOUT ===== -->
+  <section id="about" class="about section" aria-labelledby="aboutTitle">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrap reveal-left">
+          <div class="about-img-frame">
+            <img src="salon_about.png" alt="Maria Beauty Salon elegant interior" class="about-img" loading="lazy" />
+          </div>
+          <div class="about-badge-float glass-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <div>
+              <strong>5-Star</strong>
+              <span>Beauty Experience</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal-right">
+          <div class="section-label">About Us</div>
+          <h2 id="aboutTitle" class="section-title">About Maria Beauty Salon</h2>
+          <div class="gold-divider"></div>
+          <p class="about-text">
+            Maria Beauty Salon is dedicated to providing exceptional beauty and grooming services with a focus on professionalism, comfort, hygiene, and personalized care. We believe every woman deserves to feel beautiful, confident, and radiant.
+          </p>
+          <p class="about-text">
+            Located in the heart of CMH Colony, Lahore, our salon combines modern luxury with warm, personalized service to deliver an experience that goes beyond beauty — it's a transformation.
+          </p>
+          <div class="about-features">
+            <div class="feature-card glass-card reveal-up">
+              <div class="feature-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 00-3-3.87"></path><path d="M16 3.13a4 4 0 010 7.75"></path></svg>
+              </div>
+              <span>Professional Staff</span>
+            </div>
+            <div class="feature-card glass-card reveal-up">
+              <div class="feature-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <span>Hygienic Environment</span>
+            </div>
+            <div class="feature-card glass-card reveal-up">
+              <div class="feature-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              </div>
+              <span>Premium Products</span>
+            </div>
+            <div class="feature-card glass-card reveal-up">
+              <div class="feature-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path></svg>
+              </div>
+              <span>Personalized Beauty Care</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 03: SERVICES ===== -->
+  <section id="services" class="services section" aria-labelledby="servicesTitle">
+    <div class="services-bg-decor" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal-up">Our Expertise</div>
+        <h2 id="servicesTitle" class="section-title reveal-up">Premium Services</h2>
+        <div class="gold-divider centered reveal-up"></div>
+        <p class="section-subtitle reveal-up">Indulge in our comprehensive range of luxury beauty treatments tailored just for you</p>
+      </div>
+
+      <div class="services-grid" role="list">
+
+        <article class="service-card reveal-up" role="listitem" aria-label="Bridal Makeup service">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 class="service-title">Bridal Makeup</h3>
+          <p class="service-desc">Radiant, long-lasting bridal looks crafted to make your special day unforgettable and absolutely breathtaking.</p>
+          <div class="service-hover-line"></div>
+        </article>
+
+        <article class="service-card reveal-up" role="listitem" aria-label="Party Makeup service">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="service-title">Party Makeup</h3>
+          <p class="service-desc">Glamorous, photo-ready party looks that keep you looking flawless from arrival to grand finale.</p>
+          <div class="service-hover-line"></div>
+        </article>
+
+        <article class="service-card reveal-up" role="listitem" aria-label="Hair Cutting service">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>
+          </div>
+          <h3 class="service-title">Hair Cutting</h3>
+          <p class="service-desc">Precision cuts tailored to your face shape and lifestyle by our experienced hair professionals.</p>
+          <div class="service-hover-line"></div>
+        </article>
+
+        <article class="service-card reveal-up" role="listitem" aria-label="Hair Styling service">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 class="service-title">Hair Styling</h3>
+          <p class="service-desc">From sleek blowouts to intricate updos, our stylists create show-stopping hairstyles for every occasion.</p>
+          <div class="service-hover-line"></div>
+        </article>
+
+        <article class="service-card reveal-up" role="listitem" aria-label="Hair Coloring service">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z"/><path d="M8 12h8M12 8v8"/></svg>
+          </div>
+          <h3 class="service-title">Hair Coloring</h3>
+          <p class="service-desc">Vibrant, dimensional color treatments using premium products that nourish while they beautify.</p>
+          <div class="service-hover-line"></div>
+        </article>
+
+        <article class="service-card reveal-up" role="listitem" aria-label="Facials service">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3 class="service-title">Facials</h3>
+          <p class="service-desc">Rejuvenating facial treatments that deeply cleanse, hydrate, and restore your skin's natural glow.</p>
+          <div class="service-hover-line"></div>
+        </article>
+
+        <article class="service-card reveal-up" role="listitem" aria-label="Skincare Treatments service">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <h3 class="service-title">Skincare Treatments</h3>
+          <p class="service-desc">Advanced skincare protocols targeting specific concerns for visibly healthy, luminous skin.</p>
+          <div class="service-hover-line"></div>
+        </article>
+
+        <article class="service-card reveal-up" role="listitem" aria-label="Manicure service">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3 class="service-title">Manicure</h3>
+          <p class="service-desc">Perfectly polished nails with luxury hand treatments that leave your hands silky smooth and beautiful.</p>
+          <div class="service-hover-line"></div>
+        </article>
+
+        <article class="service-card reveal-up" role="listitem" aria-label="Pedicure service">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a5 5 0 015 5v3a5 5 0 01-10 0V7a5 5 0 015-5z"/><path d="M5.14 16.14A6 6 0 0012 20a6 6 0 006.86-3.86"/></svg>
+          </div>
+          <h3 class="service-title">Pedicure</h3>
+          <p class="service-desc">Indulgent foot care treatments combining relaxing soaks with expert nail care for total foot pampering.</p>
+          <div class="service-hover-line"></div>
+        </article>
+
+        <article class="service-card reveal-up" role="listitem" aria-label="Waxing service">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3l18 18M10.5 6.5a6 6 0 016 6M3 12a9 9 0 009 9"/></svg>
+          </div>
+          <h3 class="service-title">Waxing</h3>
+          <p class="service-desc">Smooth, long-lasting hair removal using premium wax formulations for sensitive and all skin types.</p>
+          <div class="service-hover-line"></div>
+        </article>
+
+        <article class="service-card reveal-up" role="listitem" aria-label="Threading service">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+          <h3 class="service-title">Threading</h3>
+          <p class="service-desc">Precise eyebrow shaping and facial threading for perfectly defined, expressive brows.</p>
+          <div class="service-hover-line"></div>
+        </article>
+
+        <article class="service-card reveal-up service-card--featured" role="listitem" aria-label="Beauty Packages service">
+          <div class="service-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h3 class="service-title">Beauty Packages</h3>
+          <p class="service-desc">Curated all-inclusive beauty packages combining multiple services for the ultimate luxury experience.</p>
+          <div class="service-featured-badge">Best Value</div>
+          <div class="service-hover-line"></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 04: WHY CHOOSE US ===== -->
+  <section id="why-us" class="why-us section" aria-labelledby="whyUsTitle">
+    <div class="why-us-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal-up">Our Promise</div>
+        <h2 id="whyUsTitle" class="section-title reveal-up">Why Clients Choose Us</h2>
+        <div class="gold-divider centered reveal-up"></div>
+        <p class="section-subtitle reveal-up">We combine expertise, luxury, and care to create an unrivalled beauty experience</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card glass-card reveal-up" role="article">
+          <div class="why-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Experienced Beauty Experts</h3>
+          <p>Our team of skilled professionals bring years of expertise and passion to every service they perform.</p>
+        </div>
+        <div class="why-card glass-card reveal-up" role="article">
+          <div class="why-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Premium Products</h3>
+          <p>We exclusively use top-of-the-line beauty products from internationally recognized luxury brands.</p>
+        </div>
+        <div class="why-card glass-card reveal-up" role="article">
+          <div class="why-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <h3>Affordable Pricing</h3>
+          <p>Luxury beauty services at transparent, accessible prices — no hidden costs, just exceptional value.</p>
+        </div>
+        <div class="why-card glass-card reveal-up" role="article">
+          <div class="why-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Comfortable Environment</h3>
+          <p>A serene, beautifully designed space where you can relax and enjoy your beauty journey in total comfort.</p>
+        </div>
+        <div class="why-card glass-card reveal-up" role="article">
+          <div class="why-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Customer Satisfaction</h3>
+          <p>Your happiness is our ultimate goal. We go above and beyond to ensure you leave feeling truly beautiful.</p>
+        </div>
+        <div class="why-card glass-card reveal-up" role="article">
+          <div class="why-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Convenient Location</h3>
+          <p>Centrally located at CMH Chowk, Lahore — easily accessible for clients across the city.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 05: GALLERY ===== -->
+  <section id="gallery" class="gallery section" aria-labelledby="galleryTitle">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal-up">Our Work</div>
+        <h2 id="galleryTitle" class="section-title reveal-up">Beauty Gallery</h2>
+        <div class="gold-divider centered reveal-up"></div>
+        <p class="section-subtitle reveal-up">A showcase of transformations, artistry, and beauty excellence</p>
+      </div>
+
+      <div class="gallery-filter reveal-up" role="tablist" aria-label="Gallery filter">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" id="filterAll">All</button>
+        <button class="filter-btn" data-filter="bridal" role="tab" aria-selected="false" id="filterBridal">Bridal</button>
+        <button class="filter-btn" data-filter="makeup" role="tab" aria-selected="false" id="filterMakeup">Makeup</button>
+        <button class="filter-btn" data-filter="hair" role="tab" aria-selected="false" id="filterHair">Hair</button>
+        <button class="filter-btn" data-filter="skincare" role="tab" aria-selected="false" id="filterSkincare">Skincare</button>
+        <button class="filter-btn" data-filter="salon" role="tab" aria-selected="false" id="filterSalon">Salon</button>
+      </div>
+
+      <div class="gallery-columns" id="galleryGrid" role="list">
+
+        <!-- Column 1 -->
+        <div class="gallery-col">
+          <div class="gallery-item" data-category="bridal" role="listitem">
+            <div class="gallery-img-wrap" style="height:320px">
+              <img src="gallery_bridal.png" alt="Stunning bridal makeup transformation" loading="lazy" />
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content"><h4>Bridal Makeup</h4><p>Complete bridal transformation</p></div>
+                <button class="gallery-zoom" aria-label="View full size" onclick="openLightbox(this)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="hair" role="listitem">
+            <div class="gallery-img-wrap" style="height:420px">
+              <img src="gallery_hair.png" alt="Luxury hair styling and treatment" loading="lazy" />
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content"><h4>Hair Styling</h4><p>Glossy professional finish</p></div>
+                <button class="gallery-zoom" aria-label="View full size" onclick="openLightbox(this)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="salon" role="listitem">
+            <div class="gallery-img-wrap" style="height:280px">
+              <img src="salon_about.png" alt="Elegant luxury salon interior" loading="lazy" />
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content"><h4>Salon Interior</h4><p>Luxury premium ambiance</p></div>
+                <button class="gallery-zoom" aria-label="View full size" onclick="openLightbox(this)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="gallery-col">
+          <div class="gallery-item" data-category="skincare" role="listitem">
+            <div class="gallery-img-wrap" style="height:380px">
+              <img src="gallery_facial.png" alt="Premium facial skincare treatment" loading="lazy" />
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content"><h4>Skincare Treatment</h4><p>Luxury facial rejuvenation</p></div>
+                <button class="gallery-zoom" aria-label="View full size" onclick="openLightbox(this)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="bridal" role="listitem">
+            <div class="gallery-img-wrap" style="height:280px">
+              <img src="gallery_bridal.png" alt="Elegant bridal look styling" loading="lazy" />
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content"><h4>Bridal Look</h4><p>Timeless bridal elegance</p></div>
+                <button class="gallery-zoom" aria-label="View full size" onclick="openLightbox(this)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="makeup" role="listitem">
+            <div class="gallery-img-wrap" style="height:360px">
+              <img src="salon_hero.png" alt="Glamorous party makeup look" loading="lazy" />
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content"><h4>Party Makeup</h4><p>Glamorous evening look</p></div>
+                <button class="gallery-zoom" aria-label="View full size" onclick="openLightbox(this)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="gallery-col">
+          <div class="gallery-item" data-category="makeup" role="listitem">
+            <div class="gallery-img-wrap" style="height:300px">
+              <img src="salon_about.png" alt="Professional makeup station" loading="lazy" />
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content"><h4>Makeup Station</h4><p>Premium vanity setup</p></div>
+                <button class="gallery-zoom" aria-label="View full size" onclick="openLightbox(this)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="skincare" role="listitem">
+            <div class="gallery-img-wrap" style="height:340px">
+              <img src="gallery_facial.png" alt="Luxury skincare glow treatment" loading="lazy" />
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content"><h4>Glow Treatment</h4><p>Radiant skin results</p></div>
+                <button class="gallery-zoom" aria-label="View full size" onclick="openLightbox(this)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="hair" role="listitem">
+            <div class="gallery-img-wrap" style="height:380px">
+              <img src="gallery_hair.png" alt="Hair color transformation" loading="lazy" />
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content"><h4>Hair Color</h4><p>Vibrant color transformation</p></div>
+                <button class="gallery-zoom" aria-label="View full size" onclick="openLightbox(this)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+
+  <!-- ===== SECTION 06: TESTIMONIALS ===== -->
+  <section id="testimonials" class="testimonials section" aria-labelledby="testimonialsTitle">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal-up">Client Love</div>
+        <h2 id="testimonialsTitle" class="section-title reveal-up">What Our Clients Say</h2>
+        <div class="gold-divider centered reveal-up"></div>
+      </div>
+      <div class="testimonials-slider" id="testimonialsSlider" role="region" aria-label="Client testimonials">
+        <div class="testimonials-track" id="testimonialsTrack">
+
+          <div class="testimonial-card glass-card" role="article" aria-label="Testimonial from Ayesha Mahmood">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testimonial-text">
+              "Maria Beauty Salon transformed my bridal look beyond my wildest dreams. The team was incredibly professional, patient, and talented. Every guest at my wedding complimented my makeup. I couldn't have asked for anything more perfect!"
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #d4a8b4, #c17a8a)">A</div>
+              <div class="author-info">
+                <strong>Ayesha Mahmood</strong>
+                <span>Bridal Client</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card" role="article" aria-label="Testimonial from Fatima Siddiqui">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testimonial-text">
+              "I've visited many salons in Lahore but Maria Beauty Salon is in a league of its own. The facial treatment left my skin glowing for weeks. The staff is knowledgeable, the products are premium, and the atmosphere is so relaxing!"
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #b8a8d4, #8a7ac1)">F</div>
+              <div class="author-info">
+                <strong>Fatima Siddiqui</strong>
+                <span>Regular Client</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card" role="article" aria-label="Testimonial from Sana Khan">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testimonial-text">
+              "The party makeup they did for me was absolutely flawless! I received so many compliments throughout the evening. The artists truly understand what works for each individual's features. Highly recommend for any occasion!"
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #d4c8a8, #c1a87a)">S</div>
+              <div class="author-info">
+                <strong>Sana Khan</strong>
+                <span>Party Makeup Client</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card" role="article" aria-label="Testimonial from Hina Rauf">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testimonial-text">
+              "My go-to salon for everything! From hair styling to waxing, they excel in every service. The salon is spotlessly clean, the prices are very reasonable for the quality you get, and the staff always make you feel so welcome."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #a8d4c8, #7ac1b0)">H</div>
+              <div class="author-info">
+                <strong>Hina Rauf</strong>
+                <span>Regular Client</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card" role="article" aria-label="Testimonial from Zara Ali">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testimonial-text">
+              "Absolutely loved my hair coloring experience! The color came out exactly as I envisioned — rich, vibrant, and so healthy looking. The hair treatment they applied left my hair incredibly soft and shiny. Will definitely be back!"
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #d4a8c8, #c17ab0)">Z</div>
+              <div class="author-info">
+                <strong>Zara Ali</strong>
+                <span>Hair Coloring Client</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="slider-controls" aria-label="Testimonial navigation">
+        <button class="slider-btn" id="sliderPrev" aria-label="Previous testimonial">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Testimonial dots"></div>
+        <button class="slider-btn" id="sliderNext" aria-label="Next testimonial">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 07: CTA BANNER ===== -->
+  <section id="cta" class="cta-section" aria-labelledby="ctaTitle">
+    <div class="cta-bg" aria-hidden="true"></div>
+    <div class="cta-particles" aria-hidden="true"></div>
+    <div class="container">
+      <div class="cta-content">
+        <div class="section-label reveal-up" style="color: rgba(255,255,255,0.8)">Your Transformation Awaits</div>
+        <h2 id="ctaTitle" class="cta-title reveal-up">Ready For Your Beauty<br /><em>Transformation?</em></h2>
+        <p class="cta-subtitle reveal-up">Book your appointment today and discover the luxury beauty experience you deserve</p>
+        <div class="cta-buttons reveal-up">
+          <a href="#appointment" class="btn btn-primary" id="ctaBookBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Book Appointment
+          </a>
+          <a href="tel:+923214129928" class="btn btn-glass" id="ctaCallBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 017.12 2a2 2 0 012 1.73 12.13 12.13 0 00.78 4.49 2 2 0 01-.45 2.11L8.09 11a16 16 0 006.01 6.01l1-.08a2 2 0 012.11-.45 12.13 12.13 0 014.49-.78z"/></svg>
+            Call Now
+          </a>
+          <a href="https://wa.me/923214129928?text=Hello%20Maria%20Beauty%20Salon!%20I%20would%20like%20to%20book%20an%20appointment." class="btn btn-whatsapp" id="ctaWhatsappBtn" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 08: LOCATION & CONTACT ===== -->
+  <section id="contact" class="contact section" aria-labelledby="contactTitle">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal-up">Find Us</div>
+        <h2 id="contactTitle" class="section-title reveal-up">Location &amp; Contact</h2>
+        <div class="gold-divider centered reveal-up"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="contact-card glass-card">
+            <h3>Visit Our Salon</h3>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <strong>Address</strong>
+                <p>Shop #10, Day Building, CMH Chowk,<br />Opposite Cantonment Board,<br />CMH Colony, Lahore 54000, Pakistan</p>
+                <a href="https://maps.app.goo.gl/YM3XoN89LJxPZWDr6" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Open location in Google Maps">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Open in Google Maps
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 017.12 2a2 2 0 012 1.73 12.13 12.13 0 00.78 4.49 2 2 0 01-.45 2.11L8.09 11a16 16 0 006.01 6.01l1-.08a2 2 0 012.11-.45 12.13 12.13 0 014.49-.78z"/></svg>
+              </div>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+923214129928" class="contact-link" aria-label="Call +92 321 4129928">+92 321 4129928</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <strong>Business Hours</strong>
+                <p>Monday – Sunday</p>
+                <p class="hours-time">10:00 AM – 9:00 PM</p>
+                <span class="open-badge">
+                  <span class="open-dot"></span>
+                  Open 7 Days a Week
+                </span>
+              </div>
+            </div>
+
+            <div class="contact-quick-actions">
+              <a href="tel:+923214129928" class="quick-btn quick-btn--call" aria-label="Call us">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 017.12 2a2 2 0 012 1.73 12.13 12.13 0 00.78 4.49 2 2 0 01-.45 2.11L8.09 11a16 16 0 006.01 6.01l1-.08a2 2 0 012.11-.45 12.13 12.13 0 014.49-.78z"/></svg>
+                Call Us
+              </a>
+              <a href="https://wa.me/923214129928" target="_blank" rel="noopener noreferrer" class="quick-btn quick-btn--whatsapp" aria-label="WhatsApp us">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+              </a>
+              <a href="https://maps.app.goo.gl/YM3XoN89LJxPZWDr6" target="_blank" rel="noopener noreferrer" class="quick-btn quick-btn--map" aria-label="Get directions">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Directions
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-wrap reveal-right">
+          <div class="map-frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.0!2d74.3!3d31.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMwJzAwLjAiTiA3NMKwMTgnMDAuMCJF!5e0!3m2!1sen!2spk!4v1!5m2!1sen!2spk"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Maria Beauty Salon Location on Google Maps"
+              aria-label="Map showing Maria Beauty Salon location at CMH Chowk, Lahore">
+            </iframe>
+          </div>
+          <a href="https://maps.app.goo.gl/YM3XoN89LJxPZWDr6" target="_blank" rel="noopener noreferrer" class="map-cta" aria-label="Get directions to Maria Beauty Salon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 09: APPOINTMENT FORM ===== -->
+  <section id="appointment" class="appointment section" aria-labelledby="appointmentTitle">
+    <div class="appointment-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label reveal-up">Let's Connect</div>
+        <h2 id="appointmentTitle" class="section-title reveal-up">Book Your Appointment</h2>
+        <div class="gold-divider centered reveal-up"></div>
+        <p class="section-subtitle reveal-up">Schedule your beauty session with our expert team</p>
+      </div>
+      <div class="form-container glass-card reveal-up">
+        <form id="appointmentForm" class="appointment-form" novalidate aria-label="Appointment booking form">
+          <div class="form-row">
+            <div class="form-group floating">
+              <input type="text" id="clientName" name="name" class="form-input" placeholder=" " required autocomplete="name" aria-required="true" />
+              <label for="clientName" class="form-label">Your Full Name</label>
+              <div class="form-line"></div>
+            </div>
+            <div class="form-group floating">
+              <input type="tel" id="clientPhone" name="phone" class="form-input" placeholder=" " required autocomplete="tel" aria-required="true" />
+              <label for="clientPhone" class="form-label">Phone Number</label>
+              <div class="form-line"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group floating">
+              <select id="serviceSelect" name="service" class="form-input form-select" required aria-required="true">
+                <option value="" disabled selected></option>
+                <option value="Bridal Makeup">Bridal Makeup</option>
+                <option value="Party Makeup">Party Makeup</option>
+                <option value="Hair Cutting">Hair Cutting</option>
+                <option value="Hair Styling">Hair Styling</option>
+                <option value="Hair Coloring">Hair Coloring</option>
+                <option value="Facials">Facials</option>
+                <option value="Skincare Treatment">Skincare Treatment</option>
+                <option value="Manicure">Manicure</option>
+                <option value="Pedicure">Pedicure</option>
+                <option value="Waxing">Waxing</option>
+                <option value="Threading">Threading</option>
+                <option value="Beauty Package">Beauty Package</option>
+              </select>
+              <label for="serviceSelect" class="form-label">Service Required</label>
+              <div class="form-line"></div>
+            </div>
+            <div class="form-group floating">
+              <input type="date" id="preferredDate" name="date" class="form-input" placeholder=" " required aria-required="true" />
+              <label for="preferredDate" class="form-label">Preferred Date</label>
+              <div class="form-line"></div>
+            </div>
+          </div>
+          <div class="form-group floating">
+            <textarea id="clientMessage" name="message" class="form-input form-textarea" placeholder=" " rows="4" aria-label="Additional message"></textarea>
+            <label for="clientMessage" class="form-label">Message (Optional)</label>
+            <div class="form-line"></div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn--full" id="formSubmitBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Book Appointment
+            </button>
+            <button type="button" class="btn btn-whatsapp btn--full" id="whatsappInquiryBtn" onclick="sendWhatsAppInquiry()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp Inquiry
+            </button>
+          </div>
+        </form>
+        <div id="formSuccess" class="form-success" hidden role="alert" aria-live="polite">
+          <div class="success-icon">✓</div>
+          <h3>Appointment Request Sent!</h3>
+          <p>Thank you for choosing Maria Beauty Salon. We'll contact you shortly to confirm your appointment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 10: FOOTER ===== -->
+  <footer class="footer" role="contentinfo" aria-label="Site footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <span class="logo-m">M</span>
+              <div class="logo-text">
+                <span class="logo-name">Maria Beauty</span>
+                <span class="logo-sub">Salon</span>
+              </div>
+            </div>
+            <p class="footer-tagline">"Enhancing Your Natural Beauty"</p>
+            <p class="footer-desc">Lahore's premier destination for luxury beauty, hair, makeup, and skincare services. Experience beauty redefined.</p>
+            <div class="social-links" aria-label="Social media links">
+              <a href="https://wa.me/923214129928" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </a>
+              <a href="tel:+923214129928" class="social-link" aria-label="Phone">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 017.12 2a2 2 0 012 1.73 12.13 12.13 0 00.78 4.49 2 2 0 01-.45 2.11L8.09 11a16 16 0 006.01 6.01l1-.08a2 2 0 012.11-.45 12.13 12.13 0 014.49-.78z"/></svg>
+              </a>
+              <a href="https://maps.app.goo.gl/YM3XoN89LJxPZWDr6" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Google Maps">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-nav">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links" role="list">
+              <li><a href="#home" class="footer-link">Home</a></li>
+              <li><a href="#about" class="footer-link">About Us</a></li>
+              <li><a href="#services" class="footer-link">Our Services</a></li>
+              <li><a href="#gallery" class="footer-link">Gallery</a></li>
+              <li><a href="#testimonials" class="footer-link">Reviews</a></li>
+              <li><a href="#appointment" class="footer-link">Book Appointment</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-services-list">
+            <h4 class="footer-heading">Our Services</h4>
+            <ul class="footer-links" role="list">
+              <li><a href="#services" class="footer-link">Bridal Makeup</a></li>
+              <li><a href="#services" class="footer-link">Party Makeup</a></li>
+              <li><a href="#services" class="footer-link">Hair Styling</a></li>
+              <li><a href="#services" class="footer-link">Hair Coloring</a></li>
+              <li><a href="#services" class="footer-link">Facials</a></li>
+              <li><a href="#services" class="footer-link">Skincare Treatments</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact-info">
+            <h4 class="footer-heading">Contact Us</h4>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <p>Shop #10, Day Building, CMH Chowk, CMH Colony, Lahore 54000</p>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 017.12 2a2 2 0 012 1.73 12.13 12.13 0 00.78 4.49 2 2 0 01-.45 2.11L8.09 11a16 16 0 006.01 6.01l1-.08a2 2 0 012.11-.45 12.13 12.13 0 014.49-.78z"/></svg>
+              <a href="tel:+923214129928" class="footer-link">+92 321 4129928</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <p>Mon–Sun: 10:00 AM – 9:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="footer-copyright">© 2026 Maria Beauty Salon. All Rights Reserved. | Lahore, Pakistan</p>
+        <a href="https://maps.app.goo.gl/YM3XoN89LJxPZWDr6" target="_blank" rel="noopener noreferrer" class="footer-maps-link" aria-label="View on Google Maps">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          View on Google Maps
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/923214129928?text=Hello%20Maria%20Beauty%20Salon!%20I%20would%20like%20to%20book%20an%20appointment."
+     target="_blank" rel="noopener noreferrer"
+     class="whatsapp-float"
+     id="whatsappFloat"
+     aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="whatsapp-tooltip">Chat with us!</span>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
