@@ -4,9 +4,7 @@
 
 A luxury beauty salon website built with pure HTML, CSS & JavaScript — featuring glassmorphism design, rose gold aesthetics, and premium animations.
 
-## 🌐 Live Website
 
-**[View Live Site →](https://your-username.github.io/maria-beauty-salon)**
 
 ---
 
